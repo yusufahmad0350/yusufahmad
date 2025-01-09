@@ -15,15 +15,15 @@ body {
   background: transparent;
 }
 
-
-#background-video {
+body::before {
+  content: "";
   position: fixed;
-  top: 0;
+  background: #010e1b;
+  background-size: cover;
   left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -1; /* Pushes video behind other content */
+  right: 0;
+  top: 0;
+  height: 100vh;
 }
 
 @media (min-width: 1024px) {
@@ -277,18 +277,6 @@ h1, h2, h3, h4, h5, h6 {
   top: 0;
   right: 0;
   background: #09203a;
-}
-.header-tops {
-  position: relative;
-  z-index: 1; /* Content layering above the video */
-  text-align: center;
-  padding: 50px 0;
-  color: white;
-}
-body {
-  margin: 0;
-  padding: 0;
-  overflow: hidden; /* Prevent scrolling to hide extra video */
 }
 
 #header.header-top .social-links, #header.header-top h2 {
